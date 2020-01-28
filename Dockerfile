@@ -1,7 +1,8 @@
 FROM alpine:latest
 
 COPY ./server.jar /home/
-COPY ./eula.txt /home/
+COPY ./eula.txt /
+COPY ./server.properties /
 
 RUN ["apk", "--update", "add", "openjdk8-jre"]
 RUN ["/usr/bin/java", "-version"]
